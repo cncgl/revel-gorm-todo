@@ -4,7 +4,7 @@ import (
     _ "github.com/lib/pq"
     "github.com/jinzhu/gorm"
     "github.com/revel/revel"
-    "github.com/cncgl/go-todo/app/models"
+    "github.com/cncgl/revel-gorm-todo/app/models"
     "log"
 )
 

@@ -2,7 +2,7 @@ package app
 
 import (
     "github.com/revel/revel"
-    "github.com/cncgl/go-todo/app/controllers/api"
+    "github.com/cncgl/revel-gorm-todo/app/controllers/api"
 )
 
 func init() {
