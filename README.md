@@ -1,4 +1,6 @@
-# Welcome to Revel
+# Revel-Gorm-Todo
+
+Todo Application API on Go(revel) and Gorm.
 
 ## Getting Started
 
@@ -9,10 +11,6 @@ A high-productivity web framework for the [Go language](http://www.golang.org/).
     revel run revel-gorm-todo
 
    Run with <tt>--help</tt> for options.
-
-### Go to http://localhost:9000/ and you'll see:
-
-"It works"
 
 ### Description of Contents
 
