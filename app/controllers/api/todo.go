@@ -60,7 +60,14 @@ func (c ApiTodo) Update() revel.Result {
     return c.RenderJson(r)
 }
 
-func (c ApiTodo) Delete() revel.Result {
-    r := Response{"delete"}
+func (c ApiTodo) Delete(id int) revel.Result {
+    todo := models.Todo{}
+    if err := DB.First(&todo, id).Error; err != nil {
+        return c.HandleNotFoundError(err.Error())
+    }
+    if err := DB.Delete(&todo).Error; err != nil {
+        return c.HandleInternalServerError("Record Delete Failure")
+    }
+    r := Response{"success"}
     return c.RenderJson(r)
 }

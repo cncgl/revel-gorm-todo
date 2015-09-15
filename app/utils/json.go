@@ -4,7 +4,7 @@ import (
     "encoding/json"
     "io"
     "io/ioutil"
-    "log"
+//    "log"
 )
 
 func JsonDecode(i io.Reader, s interface{}) error {

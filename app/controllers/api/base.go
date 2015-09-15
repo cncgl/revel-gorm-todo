@@ -4,7 +4,7 @@ import (
     "github.com/revel/revel"
     "github.com/cncgl/revel-gorm-todo/app/utils"
     "net/http"
-    "log"
+//    "log"
 )
 
 type TodoController struct {
