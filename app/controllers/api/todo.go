@@ -30,12 +30,6 @@ func (c ApiTodo) Show(id int) revel.Result {
 }
 
 func (c ApiTodo) Create() revel.Result {
-    //o.Validate(c.Validation)
-    //if c.Validation.HasErrors() {
-    // return errors
-    //}
-
-    log.Println("Create")
     todo := &models.Todo{}
     log.Println(todo)
     if err := c.BindParams(todo); err != nil {
@@ -55,8 +49,19 @@ func (c ApiTodo) Create() revel.Result {
     return c.RenderJson(r)
 }
 
-func (c ApiTodo) Update() revel.Result {
-    r := Response{"update"}
+func (c ApiTodo) Update(id int) revel.Result {
+    todo := &models.Todo{}
+    if err := c.BindParams(todo); err != nil {
+        return c.HandleBadRequestError(err.Error())
+    }
+    if err := validator.Validate(todo); err != nil {
+        return c.HandleBadRequestError(err.Error())
+    }
+    log.Println(todo)
+    if err := DB.Save(&todo).Error; err != nil {
+        return c.HandleInternalServerError("Record Update Failure")
+    }
+    r := Response{todo}
     return c.RenderJson(r)
 }
 
