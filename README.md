@@ -8,7 +8,7 @@ A high-productivity web framework for the [Go language](http://www.golang.org/).
 
 ### Start the web server:
 
-    revel run revel-gorm-todo
+    revel run github.com/cncgl/revel-gorm-todo
 
    Run with <tt>--help</tt> for options.
 
@@ -71,3 +71,6 @@ test
 We encourage you to contribute to Revel! Please check out the [Contributing to Revel
 guide](https://github.com/revel/revel/blob/master/CONTRIBUTING.md) for guidelines about how
 to proceed. [Join us](https://groups.google.com/forum/#!forum/revel-framework)!
+
+## License
+MIT

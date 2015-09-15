@@ -6,12 +6,12 @@ module:testrunner
 
 # GET     /                                       App.Index
 
-GET     /api/todos                                  TodoController.Index
-GET     /api/todos/{id}                             TodoController.Show
-POST    /api/tosos                                  TodoController.Create
-PUT     /api/todos/{id}                             TodoController.Update
-PATCH   /api/todos/{id}                             TodoController.Update
-DELETE  /api/todos/{id}                             TodoController.Delete
+GET     /api/todos                                ApiTodo.Index
+GET     /api/todos/:id                            ApiTodo.Show
+POST    /api/todos                                ApiTodo.Create
+PUT     /api/todos/:id                            ApiTodo.Update
+PATCH   /api/todos/:id                            ApiTodo.Update
+DELETE  /api/todos/:id                            ApiTodo.Delete
 
 
 # Ignore favicon requests
